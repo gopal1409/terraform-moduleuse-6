@@ -1,24 +1,95 @@
-#we created resource so we define resource block
-#to create varaibles the block name will be varaibles
-variable "business_devision" {
-  description = "business devision on large organization"
-  type        = string #list of string #map
-  default     = "sap"
+variable "tenant_name" {
+  default     = "terraform-on-azure-by-patrick"
+  description = "Name of the tenant"
 }
 
-variable "environment" {
-  description = "environment varaibles used as prefix"
-  type        = string
-  default     = "dev"
-}
-#i need a meaningfull name
-#sap-dev-rg-default
-variable "resource_group_name" {
+variable "my_subnet_name" {
   type    = string
-  default = "rg-default"
+  default = "my-example-subnet"
+  description = "Name of the subnet"
 }
 
 variable "resource_group_location" {
-  type    = string
-  default = "eastus2"
+  default     = "westeurope"
+  description = "Location of the resource group."
 }
+
+variable "my_virtual_machine_name_win11" {
+  type        = string
+  default     = "windows11-21h2"
+  description = "Name of the Virtual Machine"
+}
+
+variable "my_virtual_machine_name_win10" {
+  type        = string
+  default     = "windows10-20h1"
+  description = "Name of the Virtual Machine"
+}
+
+variable "my_virtual_machine_password_win11" {
+  type        = string
+  default     = "P@$$w0rdWin11!"
+  description = "Password of the Virtual Machine"
+}
+
+variable "my_virtual_machine_password_win10" {
+  type        = string
+  default     = "P@$$w0rdWin10!"
+  description = "Password of the Virtual Machine"
+}
+
+variable "my_virtual_machine_size" {
+  type        = string
+  default     = "Standard_D2_v4"
+  description = "Size of the Virtual Machine"
+}
+
+variable "source_image_offer_win11" {
+  type        = string
+  default     = "windows-11"
+  description = "Size of the Virtual Machine"
+}
+
+variable "source_image_offer_win10" {
+  type        = string
+  default     = "windows-10"
+  description = "Size of the Virtual Machine"
+}
+
+variable "source_image_sku_win11" {
+  type        = string
+  default     = "win11-21h2-avd"
+  description = "Size of the Virtual Machine"
+}
+
+variable "source_image_sku_win10" {
+  type        = string
+  default     = "20h1-pro"
+  description = "Size of the Virtual Machine"
+}
+
+variable "network_interface_name_win11" {
+  type        = string
+  default     = "nic-win11"
+  description = "Name of the NIC"
+}
+
+variable "network_interface_name_win10" {
+  type        = string
+  default     = "nic-win10"
+  description = "Name of the NIC"
+}
+
+variable "public_ip_address_name_win11" {
+  type        = string
+  default     = "pub-ip-win11"
+  description = "Name of the public ip address"
+}
+
+variable "public_ip_address_name_win10" {
+  type        = string
+  default     = "pub-ip-win10"
+  description = "Name of the public ip address"
+}
+
+
